@@ -8,44 +8,12 @@
     <meta name="keywords" content="IT certification, tech training, CompTIA, Cisco, AWS, Microsoft, online courses, certification prep">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
-        }
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: scale(1.03);
-        }
-        .login-modal, .payment-modal {
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-        }
-        .modal-active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .nav-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #3b82f6;
-            transition: width 0.3s;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        } 
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
     
           
 
-    </style>
+    </style> -->
 </head>
 <body class="font-sans antialiased text-gray-800">
     <!-- Navigation -->
@@ -55,13 +23,12 @@
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
                         <i class="fas fa-certificate text-blue-600 text-2xl mr-2"></i>
-                        <span class="text-xl font-bold text-gray-900">TechCert<span class="text-blue-600">Pro</span></span>
+                        <span class="text-xl font-bold text-gray-900">TekCert<span class="text-blue-600">Prep</span></span>
                     </div>
                     <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                         <a href="#home" class="nav-link border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
                         <a href="#courses" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Courses</a>
-                        <a href="#instructor" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Instructor</a>
-                        <a href="#testimonials" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Testimonials</a>
+                        <a href="#instructors" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Instructors</a>
                         <a href="#contact" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
                     </div>
                 </div>
@@ -87,10 +54,12 @@
                 <a href="#testimonials" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Testimonials</a>
                 <a href="#contact" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
                 <div class="pt-4 pb-3 border-t border-gray-200">
+                
                     <div class="flex items-center px-4">
                         <button onclick="toggleLoginModal()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium mr-2 w-full">Student Login</button>
                         <button onclick="togglePaymentModal()" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-medium w-full">Enroll Now</button>
-                    </div>
+                    </div>  
+                  
                 </div>
             </div>
         </div>
@@ -110,11 +79,11 @@
                 </div>
                 <div class="relative">
                     <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="IT Certification Training" class="rounded-lg shadow-2xl">
-                    <div class="absolute -bottom-6 -left-6 bg-yellow-400 text-gray-900 py-2 px-4 rounded-lg shadow-lg">
+                    <!--<div class="absolute -bottom-6 -left-6 bg-yellow-400 text-gray-900 py-2 px-4 rounded-lg shadow-lg"> -->
                         <div class="flex items-center">
-                            <i class="fas fa-star mr-2"></i>
-                            <span class="font-bold">4.9/5</span>
-                            <span class="ml-2">(1,200+ reviews)</span>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -122,25 +91,13 @@
         </div>
     </section>
 
-    <!-- Trusted By Section -->
-    <section class="bg-gray-50 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-gray-500 mb-8">Trusted by professionals at leading companies</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center">
-                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="h-12 opacity-60 hover:opacity-100 transition duration-300">
-                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="h-12 opacity-60 hover:opacity-100 transition duration-300">
-                <img src="https://logo.clearbit.com/google.com" alt="Google" class="h-12 opacity-60 hover:opacity-100 transition duration-300">
-                <img src="https://logo.clearbit.com/cisco.com" alt="Cisco" class="h-12 opacity-60 hover:opacity-100 transition duration-300">
-                <img src="https://logo.clearbit.com/ibm.com" alt="IBM" class="h-12 opacity-60 hover:opacity-100 transition duration-300">
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Popular Courses Section -->
     <section id="courses" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Popular Certification Courses</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Certification Catalogue</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive IT certification programs designed to help you pass your exams and advance your career.</p>
             </div>
             
@@ -148,8 +105,9 @@
                 <!-- Course Card 1 -->
                 <div class="course-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="AWS Certification" class="w-full h-48 object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">BESTSELLER</div>
+                        <img src="AWS-SolArchitect-Associate-2020.webp" alt="AWS Certification" class="w-full h-48 object-cover">
+                        
+                    
                     </div>
                     <div class="p-6">
                         <div class="flex items-center mb-2">
@@ -173,7 +131,8 @@
                 <!-- Course Card 2 -->
                 <div class="course-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7ac11c3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CompTIA Security+" class="w-full h-48 object-cover">
+                      <!--  <img src="https://images.unsplash.com/photo-1517430816045-df4b7ac11c3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CompTIA Security+" class="w-full h-48 object-cover">  -->
+                      <img src="security plus.png" alt="Security Plus"> 
                     </div>
                     <div class="p-6">
                         <div class="flex items-center mb-2">
@@ -182,11 +141,13 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">CompTIA Security+</h3>
                         <p class="text-gray-600 mb-4">Learn cybersecurity fundamentals and prepare for the CompTIA Security+ certification exam.</p>
+                        
                         <div class="flex items-center mb-4">
                             <div class="flex items-center">
                                 <i class="fas fa-star text-yellow-400 mr-1"></i>
                                 <span class="text-gray-900 font-medium">4.8</span>
                                 <span class="text-gray-500 text-sm ml-1">(280)</span>
+                                
                             </div>
                             <span class="text-gray-500 text-sm ml-auto">$249</span>
                         </div>
@@ -197,7 +158,7 @@
                 <!-- Course Card 3 -->
                 <div class="course-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cisco CCNA" class="w-full h-48 object-cover">
+                        <img src="cisco.jpg" alt="Cisco CCNA" class="w-full h-48 object-cover">
                         <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</div>
                     </div>
                     <div class="p-6">
@@ -226,543 +187,129 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="py-20 bg-gray-50">
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose TechCert Pro?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We provide the most effective IT certification training to help you succeed.</p>
+                <h2 id="instructors" class="text-3xl md:text-4xl font-bold mb-4">Instructors</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our team of creative experts brings diverse skills and experience to deliver exceptional results for our clients.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-chalkboard-teacher text-blue-600 text-2xl"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Instructors</h3>
-                    <p class="text-gray-600">Learn from certified professionals with real-world experience in their fields.</p>
+                    <h3 class="text-xl font-bold text-center mb-1">Sarah Johnson</h3>
+                    <p class="text-primary text-center font-medium mb-3">Creative Director</p>
+                    <p class="text-gray-600 text-center text-sm mb-4">15+ years in creative leadership and brand transformation.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="bg-white p-8 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-laptop-code text-green-600 text-2xl"></i>
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Hands-on Labs</h3>
-                    <p class="text-gray-600">Practice with real equipment and virtual environments to reinforce learning.</p>
+                    <h3 class="text-xl font-bold text-center mb-1">Joel Twumasi</h3>
+                    <p class="text-primary text-center font-medium mb-3">Lead Designer</p>
+                    <p class="text-gray-600 text-center text-sm mb-4">Specializes Networking,Systems Administration and Cloud Computing.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="bg-white p-8 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-certificate text-purple-600 text-2xl"></i>
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Exam Pass Guarantee</h3>
-                    <p class="text-gray-600">Free retraining if you don't pass your certification exam on the first attempt.</p>
+                    <h3 class="text-xl font-bold text-center mb-1">Emily Rodriguez</h3>
+                    <p class="text-primary text-center font-medium mb-3">Lead Trainer</p>
+                    <p class="text-gray-600 text-center text-sm mb-4">Specializes in graphic design and branding.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="bg-white p-8 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
-                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-headset text-yellow-600 text-2xl"></i>
+                <!-- Team Member 4 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Kim" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Support</h3>
-                    <p class="text-gray-600">Get help whenever you need it from our dedicated support team.</p>
+                    <h3 class="text-xl font-bold text-center mb-1">Desmond Andoh Mensah</h3>
+                    <p class="text-primary text-center font-medium mb-3">Creative Director</p>
+                    <p class="text-gray-600 text-center text-sm mb-4">Specialize in  .</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-vimeo-v"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary">
+                        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Priya Patel" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-1">Oheneba Manu</h3>
+                    <p class="text-primary text-center font-medium mb-3">Cybersecurity Instructor</p>
+                    <p class="text-gray-600 text-center text-sm mb-4">Specialized in Cybersecurity training.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <br>
+        <br>
+        <br>
 
-    <!-- Instructor Profile Section -->
-    <section id="instructor" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-                <div class="mb-12 lg:mb-0">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Instructor Profile" class="rounded-lg shadow-xl">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Meet Your Instructor</h2>
-                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Michael Johnson</h3>
-                    <p class="text-gray-600 mb-6">With over 15 years of experience in IT infrastructure and security, Michael has trained thousands of professionals for top tech certifications. He holds multiple certifications including AWS Certified Solutions Architect Professional, CISSP, CCNP, and CompTIA Security+.</p>
-                    
-                    <div class="mb-8">
-                        <h4 class="text-lg font-semibold text-gray-900 mb-3">Teaching Approach:</h4>
-                        <p class="text-gray-600 mb-4">Michael focuses on practical, real-world applications of certification concepts. His teaching style combines theoretical knowledge with hands-on labs to ensure students are fully prepared for both exams and real IT challenges.</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-gray-700">15+ Years Experience</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-gray-700">8 Industry Certifications</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-gray-700">3,000+ Students Trained</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-gray-700">94% First-Time Pass Rate</span>
-                        </div>
-                    </div>
-                    
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Schedule a Consultation</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Our Students Say</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Hear from professionals who transformed their careers with our certification training.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah K." class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Sarah K.</h4>
-                            <p class="text-gray-500 text-sm">AWS Certified Solutions Architect</p>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="flex text-yellow-400 mb-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-600">"Michael's AWS course was incredibly thorough. The hands-on labs were exactly what I needed to feel confident for the exam. I passed on my first attempt and got promoted within 2 months!"</p>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James L." class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900">James L.</h4>
-                            <p class="text-gray-500 text-sm">Cisco CCNA Certified</p>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="flex text-yellow-400 mb-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-600">"The CCNA course exceeded my expectations. The virtual lab environment was perfect for practicing configurations. I went from networking basics to passing the CCNA in just 3 months."</p>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-6">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya M." class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Priya M.</h4>
-                            <p class="text-gray-500 text-sm">CompTIA Security+ Certified</p>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="flex text-yellow-400 mb-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-600">"As someone transitioning into cybersecurity, this course gave me the perfect foundation. The exam tips were spot-on, and the instructor's real-world examples made complex concepts easy to understand."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Certification Path Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Certification Paths</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Structured learning paths to guide you from beginner to expert in your chosen IT domain.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Path 1 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <div class="bg-blue-600 text-white p-6">
-                        <h3 class="text-xl font-bold mb-2">Cloud Computing</h3>
-                        <p class="opacity-90">Master AWS, Azure, and Google Cloud platforms</p>
-                    </div>
-                    <div class="p-6">
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>AWS Cloud Practitioner</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>AWS Solutions Architect</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>Microsoft Azure Administrator</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>Google Cloud Engineer</span>
-                            </li>
-                        </ul>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Path</button>
-                    </div>
-                </div>
-                
-                <!-- Path 2 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <div class="bg-green-600 text-white p-6">
-                        <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
-                        <p class="opacity-90">Build expertise in security fundamentals and advanced concepts</p>
-                    </div>
-                    <div class="p-6">
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>CompTIA Security+</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>Certified Ethical Hacker (CEH)</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>CISSP</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>CCNP Security</span>
-                            </li>
-                        </ul>
-                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Path</button>
-                    </div>
-                </div>
-                
-                <!-- Path 3 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <div class="bg-purple-600 text-white p-6">
-                        <h3 class="text-xl font-bold mb-2">Networking</h3>
-                        <p class="opacity-90">From fundamentals to enterprise network design</p>
-                    </div>
-                    <div class="p-6">
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>CompTIA Network+</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>Cisco CCNA</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>CCNP Enterprise</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span>CCIE</span>
-                            </li>
-                        </ul>
-                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Path</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Upcoming Batches Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Upcoming Course Batches</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Flexible schedules to fit your availability</p>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="grid grid-cols-1 md:grid-cols-4 bg-gray-100 border-b border-gray-200">
-                    <div class="font-semibold text-gray-700 p-4">Course</div>
-                    <div class="font-semibold text-gray-700 p-4">Start Date</div>
-                    <div class="font-semibold text-gray-700 p-4">Schedule</div>
-                    <div class="font-semibold text-gray-700 p-4">Action</div>
-                </div>
-                
-                <!-- Batch 1 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 border-b border-gray-200 hover:bg-gray-50 transition duration-150">
-                    <div class="p-4 flex items-center">
-                        <div class="bg-blue-100 p-2 rounded mr-4">
-                            <i class="fas fa-cloud text-blue-600"></i>
-                        </div>
-                        <span class="font-medium">AWS Solutions Architect</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <i class="far fa-calendar-alt text-gray-500 mr-2"></i>
-                        <span>July 15, 2023</span>
-                    </div>
-                    <div class="p-4">
-                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Weekdays</span>
-                        <span class="text-gray-600 ml-2">Mon-Wed-Fri, 6-9 PM EST</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <button onclick="togglePaymentModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded transition duration-300">Enroll</button>
-                    </div>
-                </div>
-                
-                <!-- Batch 2 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 border-b border-gray-200 hover:bg-gray-50 transition duration-150">
-                    <div class="p-4 flex items-center">
-                        <div class="bg-green-100 p-2 rounded mr-4">
-                            <i class="fas fa-shield-alt text-green-600"></i>
-                        </div>
-                        <span class="font-medium">CompTIA Security+</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <i class="far fa-calendar-alt text-gray-500 mr-2"></i>
-                        <span>July 22, 2023</span>
-                    </div>
-                    <div class="p-4">
-                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Weekend</span>
-                        <span class="text-gray-600 ml-2">Sat-Sun, 10 AM-2 PM EST</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <button onclick="togglePaymentModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded transition duration-300">Enroll</button>
-                    </div>
-                </div>
-                
-                <!-- Batch 3 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 border-b border-gray-200 hover:bg-gray-50 transition duration-150">
-                    <div class="p-4 flex items-center">
-                        <div class="bg-red-100 p-2 rounded mr-4">
-                            <i class="fas fa-network-wired text-red-600"></i>
-                        </div>
-                        <span class="font-medium">Cisco CCNA</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <i class="far fa-calendar-alt text-gray-500 mr-2"></i>
-                        <span>August 5, 2023</span>
-                    </div>
-                    <div class="p-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Weekdays</span>
-                        <span class="text-gray-600 ml-2">Tue-Thu, 7-10 PM EST</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <button onclick="togglePaymentModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded transition duration-300">Enroll</button>
-                    </div>
-                </div>
-                
-                <!-- Batch 4 -->
-                <div class="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition duration-150">
-                    <div class="p-4 flex items-center">
-                        <div class="bg-yellow-100 p-2 rounded mr-4">
-                            <i class="fas fa-server text-yellow-600"></i>
-                        </div>
-                        <span class="font-medium">Microsoft Azure Administrator</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <i class="far fa-calendar-alt text-gray-500 mr-2"></i>
-                        <span>August 12, 2023</span>
-                    </div>
-                    <div class="p-4">
-                        <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Flexible</span>
-                        <span class="text-gray-600 ml-2">Self-paced with weekly sessions</span>
-                    </div>
-                    <div class="p-4 flex items-center">
-                        <button onclick="togglePaymentModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-1.5 px-4 rounded transition duration-300">Enroll</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-blue-600 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Boost Your IT Career?</h2>
-            <p class="text-xl opacity-90 mb-8 max-w-3xl mx-auto">Join thousands of professionals who have accelerated their careers with our certification training programs.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button onclick="togglePaymentModal()" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition duration-300">Enroll Now</button>
-                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-lg text-lg transition duration-300">Talk to an Advisor</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
-                <div class="mb-12 lg:mb-0">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
-                    <p class="text-gray-600 mb-8">Have questions about our courses or certification paths? Reach out to our team for personalized guidance.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-map-marker-alt text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Location</h4>
-                                <p class="text-gray-600">123 Tech Street, Suite 400<br>San Francisco, CA 94107</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-envelope text-green-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Email Us</h4>
-                                <p class="text-gray-600">info@techcertpro.com<br>support@techcertpro.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-purple-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone-alt text-purple-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Call Us</h4>
-                                <p class="text-gray-600">+1 (555) 123-4567<br>Mon-Fri, 9AM-6PM EST</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="font-semibold text-gray-900 mb-4">Follow Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-gray-100 hover:bg-blue-600 hover:text-white p-3 rounded-full text-gray-700 transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="bg-gray-100 hover:bg-blue-400 hover:text-white p-3 rounded-full text-gray-700 transition duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="bg-gray-100 hover:bg-red-600 hover:text-white p-3 rounded-full text-gray-700 transition duration-300">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="bg-gray-100 hover:bg-blue-700 hover:text-white p-3 rounded-full text-gray-700 transition duration-300">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-                    <form>
-                        <div class="grid grid-cols-1 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                                <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                    <option>Course Inquiry</option>
-                                    <option>Certification Advice</option>
-                                    <option>Corporate Training</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
-                            </div>
-                            <div>
-                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Find answers to common questions about our certification training programs.</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <!-- FAQ Item 1 -->
-                    <div class="border-b border-gray-200">
-                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-150">
-                            <span class="text-lg font-medium text-gray-900">What makes your training different from other providers?</span>
-                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content px-6 pb-6 hidden">
-                            <p class="text-gray-600">Our training combines three key elements: (1) Instruction from industry experts who actually work with these technologies daily, (2) Hands-on labs that simulate real-world scenarios, and (3) Personalized coaching to address your specific learning needs. We also offer an exam pass guarantee - if you don't pass on your first attempt, you can retake the course for free.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 2 -->
-                    <div class="border-b border-gray-200">
-                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-150">
-                            <span class="text-lg font-medium text-gray-900">How long do I have access to the course materials?</span>
-                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content px-6 pb-6 hidden">
-                            <p class="text-gray-600">You'll have access to all course materials for 12 months from your enrollment date. This includes video lectures, lab environments, practice exams, and any updates we make to the curriculum during that period. Many students find this extended access valuable for reviewing concepts before their certification exams.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 3 -->
-                    <div class="border-b border-gray-200">
-                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-150">
-                            <span class="text-lg font-medium text-gray-900">What if I need to reschedule my training?</span>
-                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content px-6 pb-6 hidden">
-                            <p class="text-gray-600">We understand that schedules can change. You can reschedule your training up to 7 days before your scheduled start date at no additional charge. For last-minute changes (within 7 days), we may apply a small rescheduling fee, but we'll always work with you to find a solution that meets your needs.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 4 -->
-                    <div class="border-b border-gray-200">
-                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-150">
-                            <span class="text-lg font-medium text-gray-900">Do you offer corporate or group training?</span>
-                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content px-6 pb-6 hidden">
-                            <p class="text-gray-600">Yes, we provide customized corporate training solutions for teams of all sizes. Our corporate programs include tailored curriculum, flexible scheduling, dedicated account management, and volume discounts. Contact our corporate training team to discuss your organization's specific needs and learning objectives.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 5 -->
-                    <div class="">
-                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-150">
-                            <span class="text-lg font-medium text-gray-900">What payment options do you accept?</span>
-                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content px-6 pb-6 hidden">
-                            <p class="text-gray-600">We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and bank transfers. For corporate accounts, we can also invoice your organization directly. Additionally, we offer payment plans that allow you to split your tuition into multiple installments with no interest.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
@@ -825,7 +372,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 TechCert Pro. All rights reserved.</p>
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 TechCert Pro. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
@@ -835,138 +382,15 @@
         </div>
     </footer>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="login-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900">Student Login</h3>
-                    <button onclick="toggleLoginModal()" class="text-gray-400 hover:text-gray-500">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <form>
-                    <div class="mb-4">
-                        <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                        <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div class="mb-6">
-                        <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                        <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center">
-                            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                            <label for="remember-me" class="ml-2 block text-sm text-gray-700">Remember me</label>
-                        </div>
-                        <div class="text-sm">
-                            <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Forgot your password?</a>
-                        </div>
-                    </div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">Sign in</button>
-                </form>
-                <div class="mt-4 text-center text-sm">
-                    <p class="text-gray-600">Don't have an account? <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Register here</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Payment Modal -->
-    <div id="paymentModal" class="payment-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 overflow-y-auto">
-        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 my-8">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900">Enroll in Course</h3>
-                    <button onclick="togglePaymentModal()" class="text-gray-400 hover:text-gray-500">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">Course Selection</h4>
-                        <div class="mb-6">
-                            <label for="course" class="block text-sm font-medium text-gray-700 mb-1">Select Course</label>
-                            <select id="course" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                <option>AWS Solutions Architect - $299</option>
-                                <option>CompTIA Security+ - $249</option>
-                                <option>Cisco CCNA 200-301 - $349</option>
-                                <option>Microsoft Azure Administrator - $279</option>
-                                <option>Certified Ethical Hacker - $399</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="batch" class="block text-sm font-medium text-gray-700 mb-1">Select Batch</label>
-                            <select id="batch" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                                <option>July 15, 2023 - Mon/Wed/Fri 6-9PM EST</option>
-                                <option>July 22, 2023 - Sat/Sun 10AM-2PM EST</option>
-                                <option>August 5, 2023 - Tue/Thu 7-10PM EST</option>
-                                <option>August 12, 2023 - Self-paced with weekly sessions</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Payment Option</label>
-                            <div class="space-y-2">
-                                <div class="flex items-center">
-                                    <input id="full-payment" name="payment" type="radio" checked class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                    <label for="full-payment" class="ml-2 block text-sm text-gray-700">Full Payment</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="installment" name="payment" type="radio" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                    <label for="installment" class="ml-2 block text-sm text-gray-700">Installment Plan (3 monthly payments)</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">Payment Information</h4>
-                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-600">Course Fee:</span>
-                                <span class="font-medium">$299.00</span>
-                            </div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-600">Early Bird Discount:</span>
-                                <span class="font-medium text-green-600">-$30.00</span>
-                            </div>
-                            <div class="border-t border-gray-200 my-2"></div>
-                            <div class="flex justify-between font-bold text-lg">
-                                <span>Total:</span>
-                                <span>$269.00</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div>
-                                <label for="expiry" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
-                                <input type="text" id="expiry" placeholder="MM/YY" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="cvc" class="block text-sm font-medium text-gray-700 mb-1">CVC</label>
-                                <input type="text" id="cvc" placeholder="123" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="name-on-card" class="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
-                            <input type="text" id="name-on-card" placeholder="John Doe" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Complete Enrollment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+        
+
+
+
+
+    
+   
 
     <script>
         // Mobile menu toggle
@@ -1033,3 +457,57 @@
     </script>
 </body>
 </html>
+
+
+
+
+    <!-- Instructor Profile Section 
+    <section id="instructor" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Instructor Profile" class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Meet Your Instructor</h2>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Michael Johnson</h3>
+                    <p class="text-gray-600 mb-6">With over 15 years of experience in IT infrastructure and security, Michael has trained thousands of professionals for top tech certifications. He holds multiple certifications including AWS Certified Solutions Architect Professional, CISSP, CCNP, and CompTIA Security+.</p>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3">Teaching Approach:</h4>
+                        <p class="text-gray-600 mb-4">Michael focuses on practical, real-world applications of certification concepts. His teaching style combines theoretical knowledge with hands-on labs to ensure students are fully prepared for both exams and real IT challenges.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">15+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">8 Industry Certifications</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">3,000+ Students Trained</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">94% First-Time Pass Rate</span>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Schedule a Consultation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+        
+                        
+
+
+
+    
