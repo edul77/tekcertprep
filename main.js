@@ -18,33 +18,6 @@ document.querySelectorAll(".faq-toggle").forEach((button) => {
   });
 });
 
-// Modal toggle functions
-function toggleLoginModal() {
-  const modal = document.getElementById("loginModal");
-  modal.classList.toggle("modal-active");
-  document.body.classList.toggle("overflow-hidden");
-}
-
-function togglePaymentModal() {
-  const modal = document.getElementById("paymentModal");
-  modal.classList.toggle("modal-active");
-  document.body.classList.toggle("overflow-hidden");
-}
-
-// Close modals when clicking outside
-window.addEventListener("click", function (event) {
-  const loginModal = document.getElementById("loginModal");
-  const paymentModal = document.getElementById("paymentModal");
-
-  if (event.target === loginModal) {
-    toggleLoginModal();
-  }
-
-  if (event.target === paymentModal) {
-    togglePaymentModal();
-  }
-});
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -69,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const AIRTABLE_BASE_ID = "app2MnDge8FFHgz3W";
   const AIRTABLE_TABLE_NAME = "tekcertprep"; // Replace with your table name
   const AIRTABLE_PAT =
-    "patB5bCPj5UTqvpaC.79bf4c8975cc34fd518fb0ee6eeb58a64572fd3894d66006398e077c9b6f4602"; // Replace with your actual PAT
+    "patB5bCPj5UTqvpaC.79bf4c8975cc34fd518fb0ee6eeb58a64572fd3894d66006398e077c9b6f4602"; //
 
   const AIRTABLE_ENDPOINT = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(
     AIRTABLE_TABLE_NAME
@@ -98,13 +71,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!response.ok) {
         console.error("Airtable error:", result);
-        alert(
-          `Submission failed: ${result.error?.message || response.statusText}`
-        );
+        const errorPopup = document.getElementById("errorModal");
+        if (errorPopup) {
+          errorPopup.classList.remove("hidden");
+          setTimeout(() => {
+            errorPopup.classList.add("hidden");
+          }, 5000); // Hide after 5 seconds
+        }
         return;
       }
 
-      alert("Thank you! Your message has been sent.");
+      // Show the custom success popup
+      const successPopup = document.getElementById("successModal");
+      if (successPopup) {
+        successPopup.classList.remove("hidden");
+        setTimeout(() => {
+          successPopup.classList.add("hidden");
+        }, 5000); // Hide after 5 seconds
+      }
+
       form.reset();
     } catch (error) {
       console.error("Fetch error:", error);
